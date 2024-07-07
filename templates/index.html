@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Hate Speech Prevention</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>TikTok Hate Speech Prevention Demo</h1>
+
+        <video id="video-player" controls>
+            <source src="{{ url_for('static', filename='video/sample.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <form id="comment-form">
+            <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+
+        <h2>Comments</h2>
+        <ul id="comments-list"></ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
